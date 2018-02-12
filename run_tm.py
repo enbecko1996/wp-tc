@@ -120,6 +120,8 @@ for key in defined_vars.keys():
 replaceable_exec = open("rep.exec", "w")
 replaceable_exec.write(rep_exec)
 
+print(head_nodes)
+
 for h in head_nodes:
     h.make_dirs(os.curdir)
     h.make_def(os.curdir, rep_def)

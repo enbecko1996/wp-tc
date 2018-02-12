@@ -79,9 +79,7 @@ class Node:
     def make_exec(self, cur_dir, cur_exec):
         cur_dir += "/" + self.name
         if len(self.children) == 0:
-            print(self.exec_nodes)
             for exec_node in self.exec_nodes:
-                print("{" + str(exec_node.layer) + "}\n")
                 cur_exec = cur_exec.replace("{" + str(exec_node.layer) + "}\n", exec_node.option)
             out_exec = open(cur_dir + "/exec.sh", "w")
             out_exec.write(cur_exec)

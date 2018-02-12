@@ -3,11 +3,11 @@ $root$=C:/Programmieren/WP-TC/structures
 ####
 +++
 
-{[(head), (molecules)]}
-{[(molecules), ($name$_constrained)deg_0
+{[(head), (lulz)]}
+{[(lulz), ($name$_constrained)deg_0
 ,deg_15
 ,deg_30
-][(molecules), ($name$_unconstrained)ts
+][(lulz), ($name$_unconstrained)ts
 ,max
 ]}
 a $root$/$name$.coord
