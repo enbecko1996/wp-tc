@@ -1,0 +1,43 @@
+####
+$root$=C:/Programmieren/WP-TC/structures
+####
++++
+
+{[(head), (molecules)]}
+{[(molecules), ($name$_constrained)deg_0
+,deg_15
+,deg_30
+][(molecules), ($name$_unconstrained)ts
+,max
+]}
+a $root$/$name$.coord
+$file_cont$=$root$/$name$.coord
+{[($name$_constrained), (constrained)i
+idef
+f tors 1 2 7 11
+][($name$_unconstrained), (unconstrained)]}
+ired
+*
+eht
+*
+dft
+on
+func
+{[(all), (BP-86)b-p
+][(all), (B3-LYP)b3-lyp
+]}
+
+
+{[(all), (ri_on)ri
+on
+
+
+][(BP-86), (ri_off)]}
+*
+---
+##
+define < def.def
+{[(ri_on), (ri_on_exec)jobex -ri -statpt 40
+][(ri_off), (ri_off_exec)jobex -statpt 40
+]}
+##
