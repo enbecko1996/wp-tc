@@ -3,42 +3,32 @@ $root$=C:/Programmieren/WP-TC/structures
 ####
 +++
 
-{[(head), (lulz)]}
-{[(lulz), ($name$_constrained)deg_0
-,deg_15
-,deg_30
-][(lulz), ($name$_unconstrained)ts
-,max
-]}
-$python=create_angles.py$
-a $root$/$name$.coord
-$file_cont$=$root$/$name$.coord
-{[($name$_constrained), (constrained)i
-idef
-f tors 1 2 7 11
-][($name$_unconstrained), (unconstrained)]}
+{[(head), (li_h20_3)][(head), (li_h2o_4)]}
+{$python=create_angles_tetra.py$}
 ired
 *
+b all def2-SPV
+*
 eht
+
++1
+
 *
 dft
 on
 func
-{[(all), (BP-86)b-p
-][(all), (B3-LYP)b3-lyp
-]}
+b-p
 
 
-{[(all), (ri_on)ri
+ri
 on
 
 
-][(BP-86), (ri_off)]}
 *
 ---
 ##
-define < def.def
-{[(ri_on), (ri_on_exec)jobex -ri -statpt 40
-][(ri_off), (ri_off_exec)jobex -statpt 40
-]}
+define < def.def | tee define.out
+jobex -ri -statpt 40
+aoforce | tee aoforce.out
+t2x > final.xyz
 ##
