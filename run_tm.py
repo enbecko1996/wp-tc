@@ -1,4 +1,5 @@
-import os
+import os, sys
+import subprocess
 
 from Nodes import HeadNode
 
@@ -42,6 +43,18 @@ for line in lines:
 #
 # CREATE DEF NODES
 #
+
+p1 = def_dec.find("$python=")
+while p1 >= 0:
+    p2 = def_dec.find("$", p1 + 1)
+    execute = def_dec[p1 + 8:p2]
+    py_temp_out = open("py_temp_out", "w")
+    proc = subprocess.Popen(["python", execute], stdout=subprocess.PIPE, shell=True)
+    (out, err) = proc.communicate()
+    out = str(out)[2:-1].replace("\\r", "").replace("\\n", "\n")
+    def_dec = def_dec.replace(def_dec[p1: p2 + 1], out)
+    p1 = def_dec.find("$python$", p1 + 1)
+
 head_nodes = []
 o1 = def_dec.find("{")
 layer = 0

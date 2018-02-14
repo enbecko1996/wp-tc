@@ -10,6 +10,7 @@ $root$=C:/Programmieren/WP-TC/structures
 ][(lulz), ($name$_unconstrained)ts
 ,max
 ]}
+$python=create_angles.py$
 a $root$/$name$.coord
 $file_cont$=$root$/$name$.coord
 {[($name$_constrained), (constrained)i
